@@ -1,7 +1,7 @@
 # Dependency document - IoT DevEnv v0.1
 
 # Essential programs apt-get
-sudo apt-get install zsh git keepass2
+sudo apt-get install zsh git keepass2 curl
 
 # get oh-my-zsh with wget:
 #sudo sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"  &
@@ -20,6 +20,20 @@ source ~/.bashrc
 
 # Python:
 sudo apt-get install python python-pip build-essential python-dev virtualenv 
+
+# Ansible:
+sudo apt-get install ansible sshpass
+
+# Virtualbox and Vagrant:
+## First add to sources list:
+echo "deb http://download.virtualbox.org/virtualbox/debian stretch contrib" >> /etc/apt/sources.list.d
+## Next we add oracle public key
+curl -O https://www.virtualbox.org/download/oracle_vbox_2016.asc
+sudo apt-key add oracle_vbox_2016.asc
+## Finally we install the programs
+sudo apt-get update
+sudo apt-get install virtualbox virtualbox-dkms
+sudo apt-get install vagrant
 
 # Atom io:
 echo "Getting and installing atom.."
