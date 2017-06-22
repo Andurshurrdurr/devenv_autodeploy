@@ -7,10 +7,14 @@ This repository is for automating installation of dependencies and programs for 
 - Essential utility programs: Zsh, Oh-my-zsh, git, keepass
 - Compilers/interpreters/other for: Golang, Python, GCC ARM, node.js+
 - IDEs with packages: Atom.io for web/python/scripting, Eclipse for bare-metal
+- Virtualization: Virtualbox and Vagrant
 
 #### To be implemented:
 
-- Other utility programs for automation: Ansible, Docker, docker-compose, puppet, jenkins
+- Other utility programs for automation: 
+  * Ansible
+  * Docker, docker-compose,
+  * puppet, jenkins
 - Other SDKs: Google Cloud SDK
 
 ## Getting started
