@@ -1,11 +1,10 @@
 # Dependency document - IoT DevEnv v0.1
 
 # Essential programs apt-get
-sudo apt-get install zsh git keepass2 curl
+sudo apt-get install zsh git keepass2 curl wget
 
 # get oh-my-zsh with wget:
-#sudo sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"  &
-echo "add shortcut to open terminal with zsh: gnome-terminal -e zsh"
+sudo sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"  &
 
 # Golang
 sudo apt-get golang-go
@@ -18,8 +17,15 @@ mkdir -p $HOME/Workspace/go-workspace/bin
 echo "export GOPATH=$GOPATH:$HOME/Workspace/go-workspace:$HOME/Workspace/go-workspace/bin" >> ~/.bashrc
 source ~/.bashrc
 
+# SQLite
+sudo apt-get install rlwrap sqlite3 socat
+
 # Python:
-sudo apt-get install python python-pip build-essential python-dev virtualenv 
+sudo apt-get install python python-pip build-essential python-dev virtualenv
+
+## Python packages (using pip):
+pip install flask packaging oauth2client redis passlib flask-httpauth
+pip install sqlalchemy flask-sqlalchemy psycopg2 bleach
 
 # Ansible:
 sudo apt-get install ansible sshpass
@@ -34,6 +40,14 @@ sudo apt-key add oracle_vbox_2016.asc
 sudo apt-get update
 sudo apt-get install virtualbox-5.1
 sudo apt-get install vagrant
+
+# Ansible
+## First we add to sources list
+sudo ($echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main") >> /etc/apt/sources.list.d
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+sudo apt-get update
+sudo apt-get install ansible
 
 # Atom io:
 echo "Getting and installing atom.."
@@ -55,11 +69,13 @@ apm install go-plus
 ### Emmet
 apm install emmet  
 
+# Install 32-bit libraries for Linaro GCC
+sudo apt-get install lib32ncurses5
+
 # Installing and setting up compiler and IDE for ST32
 echo "Proceed to install latest eclipse IDE from their website"
 
 # Next install STLink driver - This is in the repository
 echo "Log in to www.openstm32.org and download stlink_udev_rule.tar.bz2"
-
-# Install 32-bit libraries for Linaro GCC
-sudo apt-get install lib32ncurses5
+echo "Get latest arduino IDE from their website - https://www.arduino.cc/en/Main/Software"
+echo "add shortcut to open terminal with zsh: gnome-terminal -e zsh"
