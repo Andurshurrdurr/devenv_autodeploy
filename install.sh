@@ -70,7 +70,11 @@ apm install go-plus
 apm install emmet  
 
 # Install 32-bit libraries for Linaro GCC
-sudo apt-get install lib32ncurses5
+# sudo apt-get install lib32ncurses5
+
+# Install nodejs and npm
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 # Installing and setting up compiler and IDE for ST32
 echo "Proceed to install latest eclipse IDE from their website"
