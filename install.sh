@@ -83,3 +83,14 @@ echo "Proceed to install latest eclipse IDE from their website"
 echo "Log in to www.openstm32.org and download stlink_udev_rule.tar.bz2"
 echo "Get latest arduino IDE from their website - https://www.arduino.cc/en/Main/Software"
 echo "add shortcut to open terminal with zsh: gnome-terminal -e zsh"
+
+# Configurations of aliases
+echo "alias g='git'" >> ~/.bashrc
+
+git config --global alias.lg1 "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
+git config --global alias.aa "add --all"
+git config --global alias.a "add"
+git config --global alias.l log
+git config --global alias.d diff
+git config --global alias.c "commit -e"
+git config --global alias.s status
