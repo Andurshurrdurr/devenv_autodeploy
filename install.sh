@@ -4,10 +4,10 @@
 sudo apt-get install zsh git keepass2 curl wget
 
 # get oh-my-zsh with wget:
-sudo sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"  &
+sudo sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"  
 
 # Golang
-sudo apt-get golang-go
+sudo apt install golang-go
 
 ### Set up gopath
 mkdir -p ~/Workspace/go-workspace
@@ -22,10 +22,6 @@ sudo apt-get install rlwrap sqlite3 socat
 
 # Python:
 sudo apt-get install python python-pip build-essential python-dev virtualenv
-
-## Python packages (using pip):
-pip install flask packaging oauth2client redis passlib flask-httpauth
-pip install sqlalchemy flask-sqlalchemy psycopg2 bleach
 
 # Ansible:
 sudo apt-get install ansible sshpass
@@ -47,7 +43,7 @@ sudo ($echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main") >
 
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 sudo apt-get update
-sudo apt-get install ansible
+sudo apt install ansible
 
 # Atom io:
 echo "Getting and installing atom.."
