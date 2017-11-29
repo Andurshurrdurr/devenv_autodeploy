@@ -24,6 +24,12 @@ sudo apt install -y python python-pip build-essential python-dev virtualenv
 # Ansible:
 sudo apt install -y ansible sshpass
 
+# Awesome WM
+sudo apt install -y awesome
+mkdir -p ~/.config/awesome/
+git clone https://github.com/peakbreaker/awesome-config.git 
+mv awesome-config/rc.lua ~/.config/awesome/
+
 # Virtualbox and Vagrant:
 ## First add to sources list:
 #sudo ($echo "deb http://download.virtualbox.org/virtualbox/debian stretch contrib") >> /etc/apt/sources.list.d
