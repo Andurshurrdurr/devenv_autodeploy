@@ -1,7 +1,10 @@
-# Essential programs apt-get
-sudo apt install -y zsh git keepass2 curl wget
+sudo apt update
+sudo apt upgrade -y
 
-# get oh-my-zsh with wget:
+# Essential programs apt-get
+sudo apt install -y zsh git keepass2 curl wget xscreensaver
+
+# get oh-my-zsh with wget: 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"  
 
 # Golang 
