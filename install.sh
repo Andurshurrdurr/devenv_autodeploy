@@ -27,6 +27,14 @@ sudo apt install -y python python-pip build-essential python-dev virtualenv
 # Ansible:
 sudo apt install -y ansible sshpass
 
+# install spotify
+sudo apt install snapd
+sudo snap install spotify
+if ! grep -Fxq "export PATH=$PATH:/snap/bin/" ~/.profile ; then echo "export PATH=$PATH:/snap/bin/" >> ~/.profile
+
+# Do the Xterm configuration
+cp .Xresources ~/
+
 # Awesome WM
 sudo apt install -y awesome
 mkdir -p ~/.config/awesome/
@@ -72,6 +80,8 @@ sudo apt install -y nodejs
 
 # Remove the atom.deb and notify user of end of installs
 rm atom.deb
+
+
 
 echo ""
 echo " --------- END OF AUTOMATIC INSTALLS ---------"
