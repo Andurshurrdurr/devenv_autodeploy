@@ -1,5 +1,5 @@
 import sys
-
+import os
 zshinstall = """
 # Path to vizacontiki repo (update to reflect your setup)
 vizapathprefix=%s
@@ -46,7 +46,7 @@ def main(silent):
         vizapath = "~/Documents/embedded"
     
     # First check if .zshrc has already been installed with vizaconfigs
-    with open("~/.zshrc", 'r') as f:
+    with open(os.getenv('HOME') + '/.zshrc', 'r') as f:
         for line in f:
             if "# Path to vizacontiki repo (update to reflect your setup)" in line:
                 print(".zshrc has already been configured")
@@ -56,10 +56,11 @@ def main(silent):
     with open("~/.zshrc", 'a') as f:
         zshappend = zshinstall % vizapath 
         f.write(zshappend)
+        f.writeline("\n. %s/z/z.sh" % os.path.dirname(os.path.realpath(__file__)))
 
 
 if __name__ == '__main__':
-    if len(sys.argv > 1):
+    if len(sys.argv) > 1:
         silent = True
     else:
         silent = False
