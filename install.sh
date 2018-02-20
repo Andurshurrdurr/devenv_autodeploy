@@ -46,6 +46,7 @@ cp .Xresources ~/
 
 # Awesome WM
 sudo apt install -y awesome
+rm -rf ~/.config/awesome
 mkdir -p ~/.config/awesome/
 git clone https://github.com/peakbreaker/awesome-config.git 
 mv awesome-config/rc.lua ~/.config/awesome/
