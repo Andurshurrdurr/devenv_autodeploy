@@ -1,0 +1,14 @@
+# Todos for the autodeployment
+
+- Move sources appendation till EOF
+- Do checks on appending sources etc so we dont append multple times
+- Add folder with differet requirements.txt
+- Add playbooks for ansible perhaps - nice for server CM
+- Install conda
+- Install tiling wm and configure it with config file in git repo
+- Install drivers for debuggers etc
+- Install SDKs for google cloud, aws, ibm etc
+- Install postfix 
+
+### Make sure everything runs without errors
+### Move to using more current apt instead of apt-get
