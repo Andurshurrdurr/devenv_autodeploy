@@ -89,8 +89,12 @@ echo "alias g='git'" >> ~/.bashrc
 
 git config --global alias.lg1 "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 git config --global alias.aa "add --all"
+git config --global alias.aap "add --all --patch"
 git config --global alias.a "add"
+git config --global alias.ap "add --patch"
 git config --global alias.l log
 git config --global alias.d diff
+git config --global alias.ds "diff --staged"
 git config --global alias.c "commit -e"
+git config --global alias.ch checkout
 git config --global alias.s status
