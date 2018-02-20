@@ -68,19 +68,22 @@ wget https://atom.io/download/deb -O atom.deb
 sudo dpkg -i atom.deb
 
 # Atom packages
+### sync settings will handle it
+apm install sync-settings
 
+####### Uncomment for manual install ###### 
 ### Preview HTML
-apm install atom-html-preview
+#apm install atom-html-preview
 ### Linter
-apm install linter
+#apm install linter
 ### Python linter
-apm install linter-python
+#apm install linter-python
 ### File icons
-apm install file-icons
+#apm install file-icons
 ### Go-plus
-apm install go-plus  
+#apm install go-plus  
 ### Emmet
-apm install emmet  
+#apm install emmet  
 
 # Install 32-bit libraries for Linaro GCC
 # sudo apt-get install lib32ncurses5
@@ -91,6 +94,9 @@ sudo apt install -y nodejs
 # Remove the atom.deb and notify user of end of installs
 rm atom.deb
 
+# Copy and configure .zshrc
+cp ./zshrc ~/
+python3 ./install.py
 
 
 echo ""
